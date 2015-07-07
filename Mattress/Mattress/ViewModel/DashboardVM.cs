@@ -68,7 +68,7 @@ namespace Mattress.ViewModel
             {
                 return new RelayCommand(() =>
                     {
-                        ContentView contentView = new ContentView(SelectedDashboardItem.Name);
+                        ContentView contentView = new ContentView(SelectedDashboardItem);
                         contentView.ShowDialog();
                     });
 

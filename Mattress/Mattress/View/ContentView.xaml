@@ -20,7 +20,7 @@
                     <VirtualizingStackPanel Orientation="Vertical"/>
                 </ItemsPanelTemplate>
             </Menu.ItemsPanel>
-            <MenuItem Background="#444D58">
+            <MenuItem Background="#444D58" Click="MenuItem_Click">
                 <MenuItem.HeaderTemplate>
                     <DataTemplate>
                         <StackPanel  >
@@ -84,6 +84,6 @@
                 </MenuItem.HeaderTemplate>
             </MenuItem>
         </Menu>
-        <StackPanel Grid.Column="1" Grid.Row="1"></StackPanel>
+        <StackPanel x:Name="ContentPanal" Grid.Column="1" Grid.Row="1"></StackPanel>
     </Grid>
 </Window>

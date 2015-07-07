@@ -1,4 +1,6 @@
-﻿using Mattress.ViewModel;
+﻿using Mattress.Model;
+using Mattress.UserControls;
+using Mattress.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,16 +22,26 @@ namespace Mattress.View
     /// </summary>
     public partial class ContentView : Window
     {
+
+        DashboardItem _dashboardItem = null;
         public ContentView()
         {
             InitializeComponent();
             
         }
 
-        public ContentView(string itemName)
+        public ContentView(DashboardItem dashboardItem)
         {
             InitializeComponent();
-            this.DataContext = new ContentVM(itemName);
+            _dashboardItem = dashboardItem;
+            this.DataContext = new ContentVM(dashboardItem.Name);
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            ContentPanal.Children.Clear();
+            Dimension dimension = new Dimension(_dashboardItem.Id);
+            ContentPanal.Children.Add(dimension);
         }
     }
 }
