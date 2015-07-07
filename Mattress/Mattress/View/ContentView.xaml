@@ -1,0 +1,89 @@
+﻿<Window x:Class="Mattress.View.ContentView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ContentView" Height="300" Width="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" >
+            <TextBlock  FontFamily="Open Sans" Text="{Binding Name}" Foreground="#18AA8C" FontWeight="Bold"  FontSize="22"></TextBlock>
+        </StackPanel>
+        <Menu Grid.Column="0" Grid.Row="1">
+            <Menu.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel Orientation="Vertical"/>
+                </ItemsPanelTemplate>
+            </Menu.ItemsPanel>
+            <MenuItem Background="#444D58">
+                <MenuItem.HeaderTemplate>
+                    <DataTemplate>
+                        <StackPanel  >
+                            <TextBlock  FontFamily="Open Sans" Text="Dimension" Foreground="#F1F1F1" FontWeight="Bold"  FontSize="22"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </MenuItem.HeaderTemplate>
+            </MenuItem>
+            <MenuItem Background="#444D58">
+                <MenuItem.HeaderTemplate>
+                    <DataTemplate>
+                        <StackPanel  >
+                            <TextBlock  FontFamily="Open Sans" Text="Parameters" Foreground="#F1F1F1" FontWeight="Bold"  FontSize="22"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </MenuItem.HeaderTemplate>
+            </MenuItem>
+            <MenuItem Background="#444D58">
+                <MenuItem.HeaderTemplate>
+                    <DataTemplate>
+                        <StackPanel  >
+                            <TextBlock  FontFamily="Open Sans" Text="Costing" Foreground="#F1F1F1" FontWeight="Bold"  FontSize="22"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </MenuItem.HeaderTemplate>
+            </MenuItem>
+            <MenuItem Background="#444D58">
+                <MenuItem.HeaderTemplate>
+                    <DataTemplate>
+                        <StackPanel  >
+                            <TextBlock  FontFamily="Open Sans" Text="Report" Foreground="#F1F1F1" FontWeight="Bold"  FontSize="22"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </MenuItem.HeaderTemplate>
+            </MenuItem>
+            <MenuItem Background="#444D58">
+                <MenuItem.HeaderTemplate>
+                    <DataTemplate>
+                        <StackPanel  >
+                            <TextBlock  FontFamily="Open Sans" Text="Daily Reports" Foreground="#F1F1F1" FontWeight="Bold"  FontSize="22"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </MenuItem.HeaderTemplate>
+            </MenuItem>
+            <MenuItem Background="#444D58">
+                <MenuItem.HeaderTemplate>
+                    <DataTemplate>
+                        <StackPanel  >
+                            <TextBlock  FontFamily="Open Sans" Text="MRP" Foreground="#F1F1F1" FontWeight="Bold"  FontSize="22"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </MenuItem.HeaderTemplate>
+            </MenuItem>
+            <MenuItem Background="#444D58">
+                <MenuItem.HeaderTemplate>
+                    <DataTemplate>
+                        <StackPanel  >
+                            <TextBlock  FontFamily="Open Sans" Text="Profit and Loss" Foreground="#F1F1F1" FontWeight="Bold"  FontSize="22"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </MenuItem.HeaderTemplate>
+            </MenuItem>
+        </Menu>
+        <StackPanel Grid.Column="1" Grid.Row="1"></StackPanel>
+    </Grid>
+</Window>
