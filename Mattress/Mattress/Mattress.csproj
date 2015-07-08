@@ -67,9 +67,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="UserControls\Costing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\Dimension.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Parameters.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ContentView.xaml">
       <SubType>Designer</SubType>
@@ -85,13 +93,24 @@
     </Compile>
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Common\ServiceHandler.cs" />
+    <Compile Include="Model\CostBaseModel.cs" />
+    <Compile Include="Model\CostingModel.cs" />
     <Compile Include="Model\DashboardItem.cs" />
     <Compile Include="Model\DimensionModel.cs" />
+    <Compile Include="Model\ProductionCost.cs" />
+    <Compile Include="Model\FurnishingCost.cs" />
+    <Compile Include="UserControls\Costing.xaml.cs">
+      <DependentUpon>Costing.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Dimension.xaml.cs">
       <DependentUpon>Dimension.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Parameters.xaml.cs">
+      <DependentUpon>Parameters.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\ContentVM.cs" />
+    <Compile Include="ViewModel\CostingVM.cs" />
     <Compile Include="ViewModel\DashboardVM.cs" />
     <Compile Include="ViewModel\DimensionVM.cs" />
     <Compile Include="View\ContentView.xaml.cs">

@@ -43,5 +43,19 @@ namespace Mattress.View
             Dimension dimension = new Dimension(_dashboardItem.Id);
             ContentPanal.Children.Add(dimension);
         }
+
+        private void ParameterMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            ContentPanal.Children.Clear();
+            Parameters parameters = new Parameters(_dashboardItem.Id);
+            ContentPanal.Children.Add(parameters);
+        }
+
+        private void CostingMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            ContentPanal.Children.Clear();
+            Costing costing = new Costing(_dashboardItem.Id);
+            ContentPanal.Children.Add(costing);
+        }
     }
 }

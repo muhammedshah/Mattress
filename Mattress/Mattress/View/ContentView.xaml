@@ -1,7 +1,7 @@
 ﻿<Window x:Class="Mattress.View.ContentView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="ContentView" Height="300" Width="600">
+        Title="ContentView" MinWidth="800" MinHeight="500" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"></ColumnDefinition>
@@ -29,7 +29,7 @@
                     </DataTemplate>
                 </MenuItem.HeaderTemplate>
             </MenuItem>
-            <MenuItem Background="#444D58">
+            <MenuItem x:Name="ParameterMenuItem" Background="#444D58" Click="ParameterMenuItem_Click">
                 <MenuItem.HeaderTemplate>
                     <DataTemplate>
                         <StackPanel  >
@@ -38,7 +38,7 @@
                     </DataTemplate>
                 </MenuItem.HeaderTemplate>
             </MenuItem>
-            <MenuItem Background="#444D58">
+            <MenuItem x:Name="CostingMenuItem" Background="#444D58" Click="CostingMenuItem_Click">
                 <MenuItem.HeaderTemplate>
                     <DataTemplate>
                         <StackPanel  >
